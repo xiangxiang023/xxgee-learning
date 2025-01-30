@@ -1,3 +1,27 @@
+var palettes = require('users/gena/packages:palettes');
+var palette = palettes.colorbrewer.Spectral[5].reverse();
+/* 
+function showPalette(name, palette) {
+  var image = ee.Image.pixelLonLat().select(0)
+    .clip(ee.Geometry.Rectangle({ coords: [[0, 0], [100, 10]], geodesic: false }))
+    .visualize({ min: 0, max: 100, palette: palette })
+
+  print(name)
+  print(ui.Thumbnail(image))
+}
+
+var palettes = require('users/gena/packages:palettes')  
+
+// See http://colorbrewer2.org for a full list of palettes
+showPalette('Spectral', palettes.colorbrewer.Spectral[5])
+showPalette('RdYlGn', palettes.colorbrewer.RdYlGn[11].reverse())
+showPalette('Paired', palettes.colorbrewer.Paired[10])
+
+// See https://matplotlib.org/cmocean/ for a full list of palettes
+showPalette('Algae', palettes.cmocean.Algae[7])
+showPalette('Phase', palettes.cmocean.Phase[7])
+showPalette('Deep', palettes.cmocean.Deep[7])
+*/
 // add LST Difference layer to the map
 Map.addLayer(lstDiff, {min: -2, max: 2, palette: palette}, 'LST Difference');
 
